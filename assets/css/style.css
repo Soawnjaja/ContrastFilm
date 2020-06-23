@@ -1,0 +1,619 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Play', sans-serif !important;
+    margin: 0%;
+    padding: 0%;
+}
+
+* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Play', sans-serif !important;
+}
+
+section {
+    margin-top: 80px !important;
+}
+
+p {
+    letter-spacing: 0.9 !important;
+    line-height: 1 !important;
+}
+
+
+/*--------------- hero section --------------- */
+
+.video-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.video-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #1b1b1b;
+    opacity: 0.4;
+}
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header h1 {
+    color: #c4c0c0;
+    font-size: 80px !important;
+}
+
+.header h2,
+h3 {
+    color: #ffffff;
+}
+
+.header h3 {
+    padding-right: 25px;
+}
+
+@media(max-width: 900px) {
+    .header {
+        left: 50%;
+    }
+    .header h1 {
+        font-size: 34px !important;
+        text-align: center;
+    }
+}
+
+
+/*--------------- navigation --------------- */
+
+.navigation {
+    display: flex;
+}
+
+.content {
+    position: absolute;
+    margin-top: 100vh;
+    width: 100%;
+    background-color: #0f0f0f !important;
+}
+
+.nav {
+    width: 100%;
+    height: 80px;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.nav.scrolled {
+    background-color: #979595 !important;
+    transition: background-color 500ms linear;
+    opacity: 0.7;
+}
+
+.nav #menu {
+    right: 40px;
+    position: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav #menu li {
+    padding-left: 40px;
+    display: inline-block;
+    position: relative;
+    transition: all 500ms ease-out;
+    font-weight: normal !important;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 3%;
+}
+
+.nav #menu li a {
+    transition: all 500ms ease-out;
+    font-family: 'Play', sans-serif !important;
+    letter-spacing: normal !important;
+    color: #f9f9f9;
+    font-size: 24px;
+}
+
+.nav #menu li a:hover {
+    font-family: 'Play-regular', sans-serif !important;
+    text-decoration: none;
+    letter-spacing: normal !important;
+    color: #fff;
+    transition: all 500ms ease-out;
+    font-size: 110% !important;
+}
+
+#toggle {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    float: right;
+    transition: all 0.3s ease-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.close-btn {
+    position: absolute;
+    right: 30px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 3;
+    top: -2px;
+    line-height: 80px;
+}
+
+#resize {
+    z-index: 3;
+    top: 0px;
+    position: fixed;
+    background: #0f0f0f;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+#resize #menu {
+    height: 90px;
+    position: absolute;
+    left: 45%;
+    transform: translateX(-40%);
+    text-align: center;
+    display: table-cell;
+    vertical-align: center;
+}
+
+#resize #menu li {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 50px;
+    text-transform: uppercase;
+    min-height: 50px;
+    font-weight: bold;
+    transition: all 0.1s ease-out;
+}
+
+#resize li:nth-child(1) {
+    margin-top: 140px;
+}
+
+#resize #menu li a {
+    color: #fff;
+}
+
+#resize #menu li a:hover {
+    text-decoration: none;
+}
+
+#resize.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.toggle .span:hover {
+    cursor: pointer;
+}
+
+@media(max-width: 900px) {
+    #toggle {
+        visibility: visible;
+        opacity: 1;
+        margin-top: 6px;
+        margin-right: 4px;
+    }
+    #resize ul li a {
+        font-size: 15px;
+        font-family: 'Play-regular' !important;
+        font-weight: normal !important;
+        color: rgb(156, 156, 156) !important;
+        transition: all 500ms ease-out;
+    }
+    nav #menu {
+        display: none;
+    }
+}
+
+@media(min-width: 900px) {
+    #resize {
+        visibility: hidden !important;
+    }
+}
+
+
+/*--------------- about section starts  --------------- */
+
+section .story {
+    padding-top: 10px !important;
+}
+
+.about_us {
+    height: 110vh !important;
+    background: #0f0f0f;
+}
+
+.discription .about-header {
+    font-size: 24px !important;
+}
+
+.hero {
+    background: url(../img/kirill.png) no-repeat left top;
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+
+.hero:before {
+    content: '';
+    background: url(../img/vanya.png) no-repeat left top;
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    top: 23%;
+    left: 35%;
+}
+
+.hero:after {
+    content: '';
+    background: url(../img/nikita.png) no-repeat left top;
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    top: 49%;
+    left: 55%;
+}
+
+.section-heading {
+    color: grey;
+    text-transform: none;
+    letter-spacing: 4px;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 25px !important;
+}
+
+.about_title {
+    margin-top: 150px !important;
+}
+
+.section-info {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 30px !important;
+}
+
+.discription ion-icon {
+    size: 36px !important;
+    color: blue !important;
+}
+
+.discription {
+    margin: 0px;
+    text-align: left !important;
+}
+
+.discription p {
+    margin: 0px;
+    font-size: 18px !important;
+    text-align: left !important;
+    line-height: 1.1em !important;
+    font-weight: 400 !important;
+}
+
+
+/*--------------- services section starts  --------------- */
+
+.services {
+    background: #0f0f0f;
+    height: 100vh;
+    position: relative;
+}
+
+.service ul li {
+    color: rgb(255, 255, 255) !important;
+    line-height: 1.3em !important;
+    font-size: 18px;
+    list-style: none;
+}
+
+.service h2 {
+    color: grey;
+    padding-bottom: 15px;
+}
+
+.service h4 {
+    color: grey !important;
+    padding-bottom: 15px;
+}
+
+.service .mlbottom {
+    margin-top: 40px !important;
+}
+
+.service {
+    margin-bottom: 60px;
+}
+
+
+/*--------------- project section starts  --------------- */
+
+
+/*--------------- project section end  --------------- */
+
+.project {
+    background-color: #0f0f0f;
+}
+
+.project h2 {
+    padding-bottom: 40px !important;
+}
+
+.video-block {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.video-block h3,
+p {
+    text-align: center !important;
+}
+
+.video-block h3 {
+    font-size: 25px;
+}
+
+.treevideo {
+    margin-top: 30px;
+}
+
+
+/*--------------- our team section starts  --------------- */
+
+.team-member,
+.team-img {
+    position: relative;
+}
+
+.team-img {
+    background: grey;
+    height: 340px;
+}
+
+.members {
+    margin: 50px 0;
+}
+
+.team-title {
+    margin: 20px 0;
+}
+
+.team-title h5 {
+    font-size: 28px;
+}
+
+.team-title span {
+    font-size: 20px;
+}
+
+.team-member {
+    overflow: hidden;
+}
+
+.team-one {
+    background: url(team-one.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.team-two {
+    background: url(team-two.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+
+/*--------------- newsletter section starts  --------------- */
+
+.list-group-item {
+    border: none;
+    color: grey;
+}
+
+.newsletter {
+    padding: 140px 0;
+    background: #0f0f0f;
+}
+
+.newsletter input {
+    text-transform: uppercase;
+}
+
+.newsletter .news-data {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.newsletter h1 {
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.newsletter .form-control {
+    height: 50px;
+    border-color: #fff;
+    border-radius: 0 !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+ ::placeholder {
+    letter-spacing: 4px;
+}
+
+.newsletter .btn {
+    min-height: 50px;
+    padding: 0 30px;
+    border-radius: 0;
+    background: #0f0f0f;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Play-regular' !important;
+}
+
+
+/*--------------- contact section starts here --------------- */
+
+#contact-form {
+    margin: 5% 0;
+}
+
+.contact {
+    display: none;
+}
+
+.contact .icon-title {
+    margin-top: 10px;
+    color: #000;
+}
+
+#contact-form ul {
+    list-style: none;
+    margin-bottom: 40px;
+    border-radius: 0;
+}
+
+#contact-form li:last-of-type {
+    border-bottom: none;
+}
+
+#contact-form label {
+    display: block;
+    font-size: 22px;
+    color: rgb(97, 97, 97);
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    resize: vertical;
+    background: transparent;
+    color: #101010;
+    font-weight: bolder;
+}
+
+.textarea {
+    border-bottom: 1px solid #c9c9c9;
+}
+
+@media(max-width: 900px) {
+    #contact-form {
+        margin: 5% 0;
+        width: 98%;
+    }
+}
+
+
+/*--------------- footer section starts here --------------- */
+
+.footer {
+    background: #0f0f0f;
+}
+
+#media,
+#address,
+#mail {
+    text-align: center !important;
+}
+
+.footer .container {
+    padding: 40px 0;
+}
+
+.footer li,
+p,
+h4 {
+    font-size: 24px !important;
+}
+
+.footer h4 {
+    font-weight: lighter;
+    color: #fff;
+}
+
+.footer p {
+    color: grey;
+    font-weight: lighter;
+}
+
+.footer ion-icon {
+    width: 36px;
+    height: 36px;
+    color: white;
+}
+
+.footer li {
+    font-weight: lighter;
+    color: #fff;
+    padding-left: 20px;
+    font-size: 18px !important;
+}
+
+#media ul {
+    list-style: none;
+}
+
+#media ul li {
+    display: inline-block;
+}
+
+@media(max-width: 900px) {
+    .footer .container {
+        width: 92% !important;
+    }
+}
